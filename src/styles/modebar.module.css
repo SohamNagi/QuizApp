@@ -1,0 +1,48 @@
+.modebar {
+    display: flex;
+    /* justify-content: center; Let items position themselves */
+    align-items: center;
+    background-color: lightgrey;
+    padding: 5px 10px; /* Add some padding */
+    gap: 10px; /* Add gap between items */
+}
+
+.quizButton {
+    margin-left: auto !important;
+    /* Push the button to the far right */
+}
+
+.quizStatus {
+    margin-right: auto !important;
+    /* Keep status text pushed left */
+    padding-left: 10px;
+}
+
+.quizMode {
+    background-color: lightblue;
+}
+
+/* Target AwesomeButton wrappers */
+.modebar > div {
+    display: contents; /* Make buttons direct flex children */
+}
+
+/* Apply styles directly to the AwesomeButton component via its class */
+.modebar .awssld-button--secondary {
+    /* Undo/Redo buttons */
+    width: 60px;
+}
+
+.modebar .awssld-button--primary,
+.modebar .awssld-button--danger {
+    /* Quiz/Exit buttons */
+    width: 100px;
+    margin-left: auto !important; /* Ensure this pushes the button to the far right */
+}
+
+
+
+/* Remove old specific button styles */
+/* .quizbutton { ... } */
+/* .redobutton { ... } */
+/* .undobutton { ... } */

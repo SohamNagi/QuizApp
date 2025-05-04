@@ -1,0 +1,55 @@
+.quizview {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border: 1px solid black;
+    margin: 30px;
+}
+
+.question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.optionrow {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Make wrappers fill height */
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Target AwesomeButton wrappers - let props handle flex grow */
+.optionrow > div {
+    display: flex; /* Keep as flex container */
+    align-items: stretch; /* Stretch button vertically */
+    justify-content: stretch; /* Stretch button horizontally */
+}
+
+/* Target the actual button element inside the wrapper */
+/* Ensure button fills the wrapper, which is now controlled by props */
+.optionrow > div .aws-btn {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+.correct {
+    /* Style the button directly when cheating */
+    /* background-color: lightyellow; Might conflict, use AwesomeButton props or more specific selectors if needed */
+    --button-secondary-color: rgb(203, 242, 203) !important; /* Example: Override AwesomeButton variable */
+}
+
+.focus {
+    /* Style the button directly when cheating */
+    /* background-color: lightyellow; Might conflict, use AwesomeButton props or more specific selectors if needed */
+    --button-secondary-color-dark: rgb(245, 245, 69) !important; /* Example: Override AwesomeButton variable */
+}

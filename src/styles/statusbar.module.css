@@ -1,0 +1,19 @@
+.statusBar {
+    display: flex;
+    background-color: lightgrey;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.cheatText {
+    margin-left: auto;
+    margin-right: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+/* Style the container using the class passed via className prop */
+.helpButtonContainer {
+    margin-left: auto !important;  /* Push the button container to the right */
+}

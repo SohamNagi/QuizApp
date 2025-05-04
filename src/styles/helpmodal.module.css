@@ -1,0 +1,90 @@
+/* Styles for the Help Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.modalContent {
+  background-color: #fefefe; /* Lighter background */
+  padding: 25px 25px; /* Increased padding */
+  border-radius: 10px; /* Slightly more rounded corners */
+  max-width: 600px; /* Wider modal */
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  position: relative;
+  max-height: 80vh; /* Limit height and allow scrolling */
+  overflow-y: auto; /* Enable vertical scroll if content overflows */
+  display: flex; /* Make content a flex container */
+  flex-direction: column; /* Stack content vertically */
+}
+
+.modalContent h2 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #eee; /* Thicker border */
+  padding-bottom: 1px; /* More space below title */
+  margin-bottom: 1px; /* More space before content */
+  text-align: center;
+}
+
+.modalContent h3 {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    color: #555;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 5px;
+}
+
+.modalContent p {
+  margin-bottom: 9px;
+  line-height: 1.4;
+}
+
+.modalContent ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0; /* Remove default padding */
+  margin-left: 0; /* Align with paragraphs */
+  margin-bottom: 5px; /* More space after lists */
+}
+
+.modalContent li {
+  margin-bottom: 9px; /* More space between items */
+  padding-left: 20px; /* Indent list items */
+  position: relative;
+}
+
+/* Add custom bullet points for better visual separation */
+.modalContent li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #007bff; /* Use theme color for bullets */
+    font-weight: bold;
+}
+
+.modalContent strong {
+    color: #0056b3; /* Make strong tags stand out more */
+}
+
+/* Target the wrapper div for the close button */
+.modalContent > div:last-of-type {
+    display: contents;
+}
+
+/* Style the AwesomeButton itself */
+.modalContent .awssld-button {
+    margin: 25px auto 0; /* Center the button horizontally */
+    width: 100px; /* Give it a specific width */
+}
+
+/* Remove old specific button style */
+/* .closeButton { ... } */
+/* .closeButton:hover { ... } */

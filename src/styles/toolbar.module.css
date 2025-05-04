@@ -1,0 +1,20 @@
+.toolbar {
+    display: flex;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    align-items: center; /* Changed from align-content */
+    padding: 10px;
+    gap: 10px;
+    background-color: whitesmoke;
+}
+
+/* Target the wrapper div rendered by AwesomeButton */
+.toolbar > div {
+    /* Ensure the wrapper doesn't interfere with flex item sizing */
+    display: contents; /* Treat the wrapper's children as direct children of the flex container */
+}
+
+/* Optional: If specific width is still needed, target the button inside */
+.toolbar .awssld-button {
+    width: 80px;
+}

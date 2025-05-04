@@ -1,0 +1,59 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: whitesmoke;
+    padding: 30px;
+    border: 1px solid black;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 10px;
+    margin: 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal p {
+    width: 75px;
+    text-align: end;
+    padding-right: 10px;
+}
+
+.modal input {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.buttonrow {
+    display: flex;
+    justify-content: flex-end; /* Keep buttons to the right */
+    gap: 10px;
+    margin-top: 15px; /* Add some space above buttons */
+}
+
+/* Target AwesomeButton wrappers */
+.buttonrow > div {
+    display: contents; /* Make buttons direct flex children */
+}
+
+/* Optional: If specific width is needed, target the button inside */
+.buttonrow .awssld-button {
+    width: 80px;
+}

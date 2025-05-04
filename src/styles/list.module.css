@@ -1,0 +1,18 @@
+.listview {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 10px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    font-family: sans-serif;
+    font-size: 10pt;
+}
+
+.bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
